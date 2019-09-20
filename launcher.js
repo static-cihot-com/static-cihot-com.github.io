@@ -10,7 +10,7 @@ void async function () {
 	}
 	let res = await fetch('index.json')
 	let json = await res.json()
-	let blob, code
+	let blob
 	for (let i = 0, len = json.length; i < len; i++) {
 		let { filename, cache } = json[i]
 		let type = filenameToType(filename)

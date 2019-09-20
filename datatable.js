@@ -12,6 +12,7 @@ class DataTable {
 		}
 		// 兼容多个tbody标签
 		this._tbodyIndex = 0
+		this._startIndex = 0
 		this._datas = []
 		this._limit = 50
 	}
@@ -27,6 +28,7 @@ class DataTable {
 				body.appendChild(document.createElement('tr'))
 			}
 			body.dataset.limit = i// 写在tbody上
+			this.start(this._startIndex)
 			return this
 		} else {
 			return this._limit
@@ -34,7 +36,7 @@ class DataTable {
 	}
 
 	get totalPage() {
-		return Math.ceil(this._data.length / this._limit)
+		return Math.ceil(this.data().length / this._limit)
 	}
 
 	table(table) {
@@ -110,18 +112,23 @@ class DataTable {
 		return this
 	}
 	data(data) {
-		if (data !== undefined) {
-			this._data = this._datas[this._tbodyIndex] = data
+		if (arguments.length) {
+			this._datas[this._tbodyIndex] = Array.isArray(data) ? data : []
 			return this
+		}
+		if (!Array.isArray(this._datas[this._tbodyIndex])) {
+			this._datas[this._tbodyIndex] = []
 		}
 		return this._datas[this._tbodyIndex]
 	}
 	start(index = 0) {
-		let limit = this.limit()
 		let data = this.data()
-		// let dataLen = data.length
+		let dataLen = data.length
+		if(dataLen===0) return this;
+		let limit = this.limit()
 		let curData = data.slice(index, index + limit)
 		let curDataLen = curData.length
+		if (curDataLen===0) return this;
 		let curDataIndex = Array.from(curData, (e, i) => i + index)
 		// console.debug(curData, curDataIndex)
 
@@ -303,6 +310,7 @@ class DataTable {
 						// console.debug(k, d[k])
 					})
 					tr.parentElement.insertAdjacentElement('beforeend', tr)
+					tr.scrollIntoViewIfNeeded()
 
 					// view postions
 					let totalIndex = dataLen === 0 ? 0 : dataLen - 1
