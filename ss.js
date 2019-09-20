@@ -1,6 +1,4 @@
 /* 
-document.styleSheets
-
 使用方法
 let x = ss(‘body')
 
