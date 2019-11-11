@@ -1,0 +1,25 @@
+#app {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-areas: "title title";
+}
+
+.title { grid-area: title; font-weight: bold; font-size: 16pt; }
+.keydown { grid-area: keydown }
+.keyup { grid-area: keyup }
+.action { grid-area: action }
+.status { grid-area: status }
+.combos { grid-area: combos }
+.history { grid-area: history }
+
+#app>div>*::before {
+	content: attr(class);
+	background: #ccc;
+	border-radius: 4px;
+	margin-right: 1em;
+	/* box-shadow: 1px 1px 1px #000; */
+	filter: drop-shadow(1px 1px 1px #000);
+	transform: scaleY(.7);
+	translate: 0.400s;
+	padding: 2px;
+}

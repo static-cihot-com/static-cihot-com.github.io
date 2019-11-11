@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/lib/hotkeys/hotkeys.js"></script>
+</head>
+
+<body>
+	<input type="text" id="text">
+</body>
+<script>
+	let option = {
+		// scope: 'wcj',
+		keydown: false,
+		keyup: true,
+	}
+	hotkeys('*', option,function (event, handler) {
+		console.log(handler)
+	});
+
+</script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		
+		.keyboard {
+			--bgColor: #fff;
+			--borderCorlor: #ccc;
+			--fontSize: 8pt;
+			--keySize: calc(var(--fontSize) * 2.8);
+			background: var(--bgColor);
+			border-color: var(--borderCorlor);
+			border-style: solid;
+			border-width: 1px;
+			user-select: none;
+			display: inline-block;
+			padding: var(--fontSize);
+			transform: scale(0.5);
+		}
+		.keyboard .row {
+			display: flex;
+			justify-content: space-between;
+		}
+		.keyboard a {
+			min-width: var(--keySize);
+			min-height: var(--keySize);
+			font-size: var(--fontSize);
+			font-weight: bold;
+			font-style: normal;
+			border-style: solid;
+			border-width: 2px;
+			border-color: var(--borderCorlor);
+			display: inline-block;
+			margin: 1px;
+			text-align: center;
+			vertical-align: middle;
+			white-space: pre-line;
+			overflow: hidden;
+			background-color: var(--bgcolor);
+		}
+		.keyboard p {
+			display: inline-block;
+			margin-top: var(--fontSize);
+			margin-bottom: var(--fontSize);
+			margin-left: 0;
+			margin-right: 0;
+			justify-content: space-between;
+		}
+		.keyboard .tab, .keyboard .slace {
+			min-width: calc(var(--keySize) * 1.4);
+		}
+		.keyboard .capslock {
+			min-width: calc(var(--keySize) * 2);
+		}
+		.keyboard .back {
+			min-width: calc(var(--keySize) * 1.9);
+		}
+		.keyboard .enter {
+			min-width: calc(var(--keySize) * 3);
+		}
+		.keyboard .ctrl, .keyboard .win, .keyboard .alt, .keyboard .contextmenu {
+			min-width: calc(var(--keySize) * 1.3);
+		}
+		.keyboard .space {
+			min-width: calc(var(--keySize) * 8);
+		}
+		.keyboard .shift.two {
+			min-width: calc(var(--keySize) * 4);
+		}
+		.keyboard .shift {
+			min-width: calc(var(--keySize) * 3);
+		}
+		.keyboard a.active {
+			background-color: var(--borderCorlor);
+		}
+	</style>
+	<div class="keyboard">
+		<div class="local1">
+			<div class="row">
+				<p>
+					<a class="esc">Esc</a>
+				</p>
+				<p>
+					<a class="f1">F1</a>
+					<a class="f2">F2</a>
+					<a class="f3">F3</a>
+					<a class="f4">F4</a>
+				</p>
+				<p>
+					<a class="f5">F5</a>
+					<a class="f6">F6</a>
+					<a class="f7">F7</a>
+					<a class="f8">F8</a>
+				</p>
+				<p>
+					<a class="f9">F9</a>
+					<a class="f10">F10</a>
+					<a class="f11">F11</a>
+					<a class="f12">F12</a>
+				</p>
+			</div>
+			<div class="row">
+				<a class="`">`</a>
+				<a class="1">1</a>
+				<a class="2">2</a>
+				<a class="3">3</a>
+				<a class="4">4</a>
+				<a class="5">5</a>
+				<a class="6">6</a>
+				<a class="7">7</a>
+				<a class="8">8</a>
+				<a class="9">9</a>
+				<a class="0">0</a>
+				<a class="minus">-</a>
+				<a class="icol">=</a>
+				<a class="back">Back</a>
+			</div>
+			<div class="row">
+				<a class="tab">Tab</a>
+				<a class="q">Q</a>
+				<a class="w">W</a>
+				<a class="e">E</a>
+				<a class="r">R</a>
+				<a class="t">T</a>
+				<a class="y">Y</a>
+				<a class="u">U</a>
+				<a class="i">I</a>
+				<a class="o">O</a>
+				<a class="p">P</a>
+				<a class="openmark">[</a>
+				<a class="closemark">]</a>
+				<a class="slace">\</a>
+			</div>
+			<div class="row">
+				<a class="capslock">Caps
+					Lock</a>
+				<a class="a">A</a>
+				<a class="s">S</a>
+				<a class="d">D</a>
+				<a class="f">F</a>
+				<a class="g">G</a>
+				<a class="h">H</a>
+				<a class="j">J</a>
+				<a class="k">K</a>
+				<a class="l">L</a>
+				<a class="semi">;</a>
+				<a class="’">’</a>
+				<a class="enter">Enter</a>
+			</div>
+			<div class="row">
+				<a class="shift one">Shift</a>
+				<a class="z">Z</a>
+				<a class="x">X</a>
+				<a class="c">C</a>
+				<a class="v">V</a>
+				<a class="b">B</a>
+				<a class="n">N</a>
+				<a class="m">M</a>
+				<a class="comma,">,</a>
+				<a class="dot">.</a>
+				<a class="slace2">/</a>
+				<a class="shift two">Shift</a>
+			</div>
+			<div class="row">
+				<a class="ctrl one">Ctrl</a>
+				<a class="win one">Win</a>
+				<a class="alt">Alt</a>
+				<a class="space">Space</a>
+				<a class="alt">Alt</a>
+				<a class="win two">Win</a>
+				<a class="contextmenu">CM</a>
+				<a class="ctrl two">Ctrl</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

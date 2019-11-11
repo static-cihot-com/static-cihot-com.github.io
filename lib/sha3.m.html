@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+</body>
+<script type="module">
+	let { log, warn, error } = console
+	
+	import sha3 from './sha3.m.js'
+	
+	let result = 'c4f4ee177fc3df5d78455a312bd6415e955c6ead88cca25f6c35afc61aa47dd7ecfb8982dc80322a94d176a83cbf2d8cd3e45ae7cd9083b561e232ea11b193f7'
+
+	log( result )
+	log( shake256('123132', 512) === result )
+	log( shake256.create(512).update('123').update('132').hex() === result )
+
+	log(sha3)
+
+</script>
+
+</html>

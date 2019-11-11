@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div id="autohidden">
+		<span class="show">1</span>
+		<span>2</span>
+		<span class="show">3</span>
+		<span class="show">4</span>
+	</div>
+
+	<div id="floats">
+		<span>1</span>
+		<span>2</span>
+		<span class="nofloat">3</span>
+		<span>4</span>
+	</div>
+
+	<div id="duplicate">
+		<span name="shadow1">1</span>
+		<span name="shadow2">2</span>
+		<span name="real" class="editor">3</span>
+	</div>
+
+	<form id="form">
+		<label for="form[name=number]">number</label><input type="number" name="number">
+	</form>
+</body>
+<style>
+#autohidden {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+#autohidden span {
+	display: none;
+	background: #ccc;
+}
+
+.show {
+	display: inherit!important;
+}
+
+
+#floats span {
+	float: left;
+}
+.nofloat {
+	float: inherit!important;
+}
+
+
+#duplicate {
+	position: relative;
+}
+#duplicate span {
+	position: absolute;
+	user-select: none;
+}
+
+.editor {
+	-webkit-user-modify: read-write-plaintext-only!important;
+	-moz-user-modify: read-write-plaintext-only!important;
+	user-modify: read-write-plaintext-only!important;
+	user-select: inherit!important;
+}
+</style>
+
+<script src="mutation_observer.js"></script>
+
+<script>
+	let { log } = console
+	let duplicate = document.querySelector('#duplicate')
+	let shadow1 = duplicate.querySelector('[name=shadow1]')
+	let shadow2 = duplicate.querySelector('[name=shadow2]')
+	let real = duplicate.querySelector('[name=real]')
+
+	// real.addEventListener('DOMSubtreeModified', (e)=>{
+	// 	log(e)
+	// })
+
+</script>
+
+</html>

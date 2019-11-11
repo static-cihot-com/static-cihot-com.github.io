@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<title>TM4 - Translation Memory v4</title>
+	<meta charset="utf-8">
+	<meta name="Description" content="translate translation memoq trados">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta http-equiv='expires' content='0'>
+	<meta http-equiv='pragma' content='no-cache'>
+	<meta name="theme-color" content="#f00">
+	<meta name="theme-backgrond" content="#00f">
+	<!-- <link rel="icon" href="./tm4.svg" type="image/svg+xml" sizes="any"> -->
+	<!-- <link rel="icon" type="image/ico" href="favicon.ico" sizes="any"> -->
+	<link rel="icon" type="image/png" href="favicon.png" sizes="any">
+
+	<!-- Application: Service Workers -->
+	<!-- <link rel="manifest" href="manifest.json"> -->
+	<!-- <script src="sreviceworker.js"></script> -->
+
+	<script src="/lib/d3.min.js" defer></script>
+
+	<script src="/lib/jszip.min.js" defer></script>
+
+	<script src="/ddb/cacheworker.min.js" defer></script>
+	<script src="/ddb/strarg.js" defer></script>
+	<script src="/ddb/argtext.js" defer></script>
+	<script src="/lib/utf16.js" defer></script>
+	<script src="/lib/socket.io.js" defer></script>
+	<script src="/ddb/chain.js" defer></script>
+	<script src="/ddb/wopen.js" defer></script>
+
+	<script src="/lib/worker.js" defer></script>
+	<!-- <script src="/lib/tweenmax.js" defer></script> -->
+	<script src="/lib/ddb.js" defer></script>
+	<script src="/lib/objectid.js" defer></script>
+	<script src="./lib/localeworker.js" defer></script>
+	<script src="/lib/diff_match_patch.js" defer></script>
+	<script src="/lib/localforage.js" defer></script>
+	<script src="/lib/jquery.min.js" defer></script>
+	<script src="/lib/sha256.js" defer></script>
+	<script src="/lib/sha3.min.js" defer></script>
+	<!-- <script src="/lib/vue.js" defer></script> -->
+	<script src="./lib/jquery.animate-colors-min.js" defer></script>
+	<script src="/lib/xlsx.full.min.js" defer></script>
+	<script src="./lib/punycode.js" defer></script>
+	<script src="./lib/moveable.js" defer></script>
+	<script src="./lib/reference.js" defer></script>
+	<script src="./lib/search.js" defer></script>
+	<script src="./lib/snap.svg-min.js" defer></script>
+	<script src="./lib/cancelcomment.js" defer></script>
+	<script src="/ddb/longsegmentsplit.js" defer></script>
+	<script src="/ddb/replace.js" defer></script>
+	<script src="ao.js" defer></script>
+	<script src="fn.textareaedit.js" defer></script>
+	<script src="util.format.js" defer></script>
+	<script src="ao.browsertype.js" defer></script>
+	<script src="ao.similar.js" defer></script>
+	<script src="date.prototype.js" defer></script>
+	<script src="regexplib.js" defer></script>
+	<script src="tableedit.js" defer></script>
+	<script src="converter.js" defer></script>
+	<script src="saveloadsource.js" defer></script>
+	<script src="googlenaverdaum.js" defer></script>
+	<script src="/lib/hotkey/hotkey.js" defer></script>
+	<script src="icons_base64.js" defer></script>
+	<script src="/ddb/ss.js" defer></script>
+	<script src="index.js" defer></script>
+
+
+	<script src="__01.input.files.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css" defer>
+	<link rel="stylesheet" type="text/css" href="icons.css" defer>
+	<link rel="stylesheet" type="text/css" href="/tip12/tip12.min.css" defer>
+</head>
+<style>
+</style>
+
+<body style="display: none;">
+	<!-- <img src="./touch.webp" style="position:fixed; z-index: -1; right:0; bottom:0; opacity: 0.3;"> -->
+
+	<table id="box">
+		<!-- <thead><tr><th colspan="2" id="title"></th></tr></thead> -->
+		<tr>
+			<td id="main">
+				<table>
+					<tbody class="util tb">
+						<tr>
+							<th class="no">#</th>
+							<th class="utilsource">
+								<input id="statusDictSourceRegExp" type="checkbox" title="정규식 사용하기">
+								<input id="statusDictSourceFilter" placeholder="필터">
+								<input id="statusDictSourceReplaceButton" type="button" value="바꿈">
+								<input id="statusDictSourceSearch" placeholder="검색">
+								<input id="statusDictSourceReplace" placeholder="바꿈">
+							</th>
+							<th class="utiltarget">
+								<input id="statusDictTargetRegExp" type="checkbox" title="정규식 사용하기">
+								<input id="statusDictTargetFilter" placeholder="필터">
+								<input id="statusDictTargetReplaceButton" type="button" value="바꿈">
+								<input id="statusDictTargetSearch" placeholder="검색">
+								<input id="statusDictTargetReplace" placeholder="바꿈">
+							</th>
+							<th title="">매치률</th>
+							<th title="">위치</th>
+						</tr>
+					</tbody>
+					<tbody id="statusDict"></tbody>
+					<tbody class="util work">
+						<tr>
+							<th class="no" title="선텍 해제!">#</th>
+							<th class="utilsource">
+								<input id="worksSourceRegExp" type="checkbox" title="정규식 사용하기">
+								<input id="worksSourceFilter" placeholder="필터">
+								<input id="worksSourceReplaceButton" type="button" value="바꿈">
+								<input id="worksSourceSearch" placeholder="검색">
+								<input id="worksSourceReplace" placeholder="바꿈">
+							</th>
+							<th class="utiltarget">
+								<input id="worksTargetRegExp" type="checkbox" title="정규식 사용하기">
+								<input id="worksTargetFilter" placeholder="필터">
+								<input id="worksTargetReplaceButton" type="button" value="바꿈">
+								<input id="worksTargetSearch" placeholder="검색">
+								<input id="worksTargetReplace" placeholder="바꿈">
+							</th>
+							<th>비고</th>
+							<th>메시지</th>
+							<th id="worksStatus"></th>
+						</tr>
+					</tbody>
+					<tbody id="works"></tbody>
+					<tbody class="util tm">
+						<tr class="translation-memory">
+							<td></td>
+							<td id="lsst" contenteditable="plaintext-only"></td>
+							<td id="ltst" contenteditable="plaintext-only"></td>
+							<td colspan="3">저장(Ctrl+Q)</td>
+						</tr>
+						<tr>
+							<th class="no">#</th>
+							<th class="utilsource">
+								<input id="tipsSourceRegExp" type="checkbox" title="정규식 사용하기">
+								<input id="tipsSourceFilterAll" placeholder="전체필터">
+								<input id="tipsSourceFilter" placeholder="필터">
+								<input id="tipsSourceReplaceButton" type="button" value="바꿈">
+								<input id="tipsSourceSearch" placeholder="검색">
+								<input id="tipsSourceReplace" placeholder="바꿈">
+							</th>
+							<th class="utiltarget">
+								<input id="tipsTargetRegExp" type="checkbox" title="정규식 사용하기">
+								<input id="tipsTargetFilterAll" placeholder="전체필터">
+								<input id="tipsTargetFilter" placeholder="필터">
+								<input id="tipsTargetReplaceButton" type="button" value="바꿈">
+								<input id="tipsTargetSearch" placeholder="검색">
+								<input id="tipsTargetReplace" placeholder="바꿈">
+							</th>
+							<th title="">매치률</th>
+							<th title="">위치</th>
+							<th>
+								<div id="dictArrayLengthUI"></div>
+								<div id="dictArrayTimeUI"></div>
+							</th>
+						</tr>
+					</tbody>
+
+					<tbody id="tips"></tbody>
+
+				</table>
+				</th>
+
+			
+		</tr>
+
+	</table>
+
+	<textarea id="tempResult"></textarea>
+	<div id="toolleft">
+			<div class="buttonbox" id="worksButtonbox">
+				<h3>번역내용</h3>
+				<button id="MatchWork100" title="[F1]키
+		100% 같은 내용을 채워넣기"><span class="icons_writeDocument icons"></span><span>100%(F1)</span></button>
+				<button title="작업내용에서 타겟만 비우기" onclick="clearTarget()">타겟 지우기</button>
+				<button title="빨강색으로 잠겨진 칸이 있을 시 편집가능하게 복구하기" onclick="clearWait()">타겟 잠금해제</button>
+				<button id="showAll" title="전체 보기"><span class="icons_watch icons"></span><span>전체
+						보기</span></button>
+				<button id="hideDone" title="완료된 행 숨기기"><span class="icons_watch icons"></span><span>완료
+						숨김</span></button>
+				<button id="uniqueWorksBtn" title="중복되는 행 지우기"><span class="icons_watch icons"></span><span>중복
+						지우기</span></button>
+				<button id="removeHides" title="숨겨진 행 지우기"><span class="icons_watch icons"></span><span>숨김
+						지우기</span></button>
+				<!-- <button id="sort" title="문장 길이에 따라 배열하기"><span class="icons_paragraphLeft icons"></span><span>배열</span></button> -->
+				<button title="MemoQ 태그 지우기" onclick="cancelComment(true)"><span
+						class="icons_paragraphLeft icons"></span><span>MemoQTag</span></button>
+				<button id="ImportTextLines" title="텍스트 도입하기"><span
+						class="icons_writeDocument icons"></span><span>도입</span></button>
+				<button id="gotoUntranslationTarget" title="빈간으로 가기(F2)"><span
+						class="icons_search icons"></span><span>빈칸가기(F2)</span></button>
+				<button id="downloadWorksExcel" title="엑셀파일로 다운받기"><span
+						class="icons_download icons"></span><span>엑셀받기</span></button>
+				<button id="downloadWork" title="[ALT+F3]
+		작업내용 전체를 텍스트파일로 다운로드하기
+		Ctrl를 조합하여 빈 코멘트에 시간 채워넣기
+		Shift를 조합하여 전체 코멘트에 시간 채워넣기"><span class="icons_download icons"></span><span>전체받기(Alt+F3)</span></button>
+				<button id="downloadWorkS" title="소스를 메모리로 저장하기
+		ctrl를 조합하여 파일로 다운로드하기"><span class="icons_download icons"></span><span>소스받기</span></button>
+				<button id="downloadWorkT" title="[F3]타겟을 메모리로 저장하기
+		ctrl키를 조합하여 파일로 다운로드하기"><span class="icons_download icons"></span><span>타겟받기(F3)</span></button>
+				<button id="toggleComments" title="코멘트 감추기"><span class="icons_watch icons"></span><span>코멘트
+						감추기</span></button>
+				<button id="numQA" title="숫자를 QA합니다"><span
+						class="icons_watch icons"></span><span>숫자QA</span></button>
+				<button id="dictQA" title="짧은 기록을 단어로 인식하고 QA를 합니다"><span
+						class="icons_watch icons"></span><span>단어QA</span></button>
+				<button id="mergeSelected" title="번역구역의 행수를 클릭하면 선택이 됩니다. 선택된 행들을 합칩니다."><span
+						class="icons_selection icons"></span><span>선택행 합치기</span></button>
+				<button id="saveSelected" title="번역구역의 행수를 클릭하면 선택이 됩니다. 선택된 행들을 번역기록에 저장합니다."><span
+						class="icons_selection icons"></span><span>선택행 기록하기</span></button>
+				<button id="removeSelected" title="번역구역의 행수를 클릭하면 선택이 됩니다. 선택된 행들을 합칩니다."><span
+						class="icons_selection icons"></span><span>선택행 삭제하기</span></button>
+				<button id="changeSourceAndTarget" title="소스와 타겟의 위치를 바꾸기"><span
+						class="icons_retweet icons"></span><span>좌우전환</span></button>
+				<button id="selectWorks" title="전체 선택하기
+		Ctrl를 조합하면 내용자체가 선택되어 복사됩니다.
+		Alt를 조합하면 선택을 해제합니다.
+		"><span class="icons_selection icons"></span><span>전체선택</span></button>
+				<button id="mergeDict" title="작업 내용 전부 번역기록에 추가하기"><span
+						class="icons_ok icons"></span><span>기록하기</span></button>
+				<button id="clearWork" title="작업 지우기"><span
+						class="icons_trash icons"></span><span>삭제</span></button>
+			</div>
+			<div style="user-select:none;">
+				<h3>자동 팁</h3>
+				<label title="활성화하면 번역 시, 자동으로 검색됩니다."><input id="useDictTip" type="checkbox" checked>자동 검색
+					사용</label><br>
+				<label title="매치율이상인 검색결과만 보여집니다.">매치율<input id="similarPercent"
+						style="width:4em;text-align:center;" value="40" type="number" min="0"
+						max="100">%</label><br>
+				<label title="검색결과에서 100%매칭된 내용이 있다면 현재 칸 내용을 자동으로 바꿔드립니다."><input id="auto100" type="checkbox"
+						checked>100%매칭내용 자동바꿈</label><br>
+				<label><input id="checktm1" type="checkbox">빨강색 TM에서 1번과 비교결과 보기</label>
+			</div>
+			<div>
+				<h3>현재 칸</h3>
+				<select id="focusScrollBlock">
+					<option label="필요시" value="nearest" selected></option>
+					<option label="위에" value="start"></option>
+					<option label="가운데" value="center"></option>
+					<option label="아래" value="end"></option>
+				</select>
+			</div>
+			<div>
+				<h3>색상</h3>
+				TamaiPink
+				<label class="switch" title="Tamai Pink">
+					<input type="checkbox" id="pinkthema">
+					<span class="slider round pink"></span>
+				</label>
+				ChanheeMode
+				<label class="switch" title="ChanheeMode">
+					<input type="checkbox" id="chanheeModeSwitch">
+					<span class="slider round blue"></span>
+				</label>
+			</div>
+			<div>
+				<h3>정렬</h3>
+				<label><input id="noAsc" type="button" value="원래순서로 돌아가기"></label><br>
+				<label><input id="sourceAsc" type="button" value="원문 오름순"></label>
+				<label><input id="sourceDesc" type="button" value="원문 내림순"></label>
+				<label><input id="sourceLengthAsc" type="button" value="원문길이 오름"></label>
+				<label><input id="sourceLengthDesc" type="button" value="원문길이 내림"></label>
+			</div>
+			<div>
+				<h3>기타 웹페이지 참조</h3>
+				<label><input id="useNet" type="checkbox">활성화</label>
+				<select id="netTarget" type="checkbox">
+					<option value="zh-CN" selected>简体中文</option>
+					<option value="zh-TW">繁體中文</option>
+					<option value="ko">한국어</option>
+					<option value="jp">日本語</option>
+					<option value="en">English</option>
+					<option value="fr">French</option>
+					<option value="ru">Russian</option>
+					<option value="de">Deutsch</option>
+				</select>
+				<div class="col2">
+					<label for="useNetWinLeft">x</label><input id="useNetWinLeft" type="number" placeholder="x"
+						value="0">
+					<label for="useNetWinLeft">y</label><input id="useNetWinTop" type="number" placeholder="y"
+						value="0">
+					<label for="useNetWinWidth">width</label><input id="useNetWinWidth" type="number"
+						placeholder="width" value="400">
+					<label for="useNetWinHeight">height</label><input id="useNetWinHeight" type="number"
+						placeholder="height" value="500">
+				</div>
+			</div>
+			<div id="projectAnchors"></div>
+		</div>
+		<div id="toolright">
+		
+				<div class="buttonbox" id="tipButtonbox">
+					<h3>번역기록</h3>
+					<button id="autoSizeDictWindow" title="작업창 크기 변경하기"><span
+							class="icons_resize icons"></span><span>크기고정</span></button>
+					<button id="flipDict" title="번역기록에서 소스와 타겟의 위치를 변경하기"><span
+							class="icons_retweet icons"></span><span>좌우전환</span></button>
+					<button id="downloadDictsXLS" title="엑셀파일로 다운로드하기"><span
+							class="icons_download icons"></span><span>전체엑셀받기</span></button>
+					<button id="downloadDictXLS" title="엑셀파일로 다운로드하기"><span
+							class="icons_download icons"></span><span>엑셀받기</span></button>
+					<button id="downloadDictsTxt" title="텍스트파일로 전부 다운로드하기"><span
+							class="icons_download icons"></span><span>전체텍스트받기</span></button>
+					<button id="downloadDict" title="텍스트파일로 다운로드하기"><span
+							class="icons_download icons"></span><span>텍스트받기</span></button>
+					<button id="clearDict" title="[경고] 번역기록을 전부 지우기"><span
+							class="icons_trash icons"></span><span>삭제</span></button>
+					<!-- <button id="restoreButton" title="Restore dictionary"><span class="icons_refresh icons"></span><span>Restore</span></button> -->
+				</div>
+		
+				<div>
+					<input id="TMToolFile" type="file" multiple class="hide">
+					<h3>도입(Ctrl+V)</h3>
+					<button id="importTMToolFile" title="엔드림 TM Tool 도출파일 도입하기"><span
+							class="icons_writeDocument icons"></span><span>TM
+							Tool</span></button>
+					<textarea id="workPaste" placeholder="번역내용" autofocus></textarea>
+					<textarea id="dictPaste" placeholder="번역기록"></textarea>
+				</div>
+		
+				<div>
+					<h3>선택행</h3>
+					<form id="selectedctl">
+						내용:
+						<input name="selectedText" type="text"><br>
+						유형:
+						<label><input name="selectedTextType" type="radio" value="text" checked>문자</label>
+						<label><input name="selectedTextType" type="radio" value="regexp">정규식</label><br>
+						위치:
+						<label><input name="selectedPos" type="radio" value="begin" checked>앞</label>
+						<label><input name="selectedPos" type="radio" value="end">뒤</label><br>
+						<input id="selectedInsertButton" type="button" value="삽입">
+					</form>
+				</div>
+		
+				<div>
+					<table style="border-collapse:initial;">
+						<tr title="기능:기록에서 100% 일치한 내용을 미션에 채워줍니다.">
+							<td><kbd>F1</kbd></td>
+							<td>자동 채우기</td>
+						</tr>
+						<tr title="스마트 매칭을 시도합니다.">
+							<td><kbd>PAUSE</kbd></td>
+							<td>해당 셀 자동 채우기</td>
+						</tr>
+						<tr title="비어 있는 칸으로 커서를 이동합니다.">
+							<td><kbd>F2</kbd></td>
+							<td>빈칸으로 이동</td>
+						</tr>
+						<tr title="긴 문장을 일정 규칙에 따라 짧게 분리해 드립니다.">
+							<td><kbd>F8</kbd></td>
+							<td>현재 행 분리</td>
+						</tr>
+						<tr title="원래의 긴 문장에 합병해 넣습니다.">
+							<td><kbd>F6</kbd></td>
+							<td>분리된 모든 행 합병 삽입</td>
+						</tr>
+						<tr title="원래의 긴 문장에 합병해 넣습니다.">
+							<td><kbd>CTRL+E</kbd></td>
+							<td>분리된 아래 행만 합병</td>
+						</tr>
+						<tr title="미션과 팁이외의 컨텐츠를 숨길 수 있습니다.">
+							<td><kbd>CTRL+F9</kbd></td>
+							<td>태그 삽입</td>
+						</tr>
+						<tr title="위 칸의 내용을 복사합니다.">
+							<td><kbd>CTRL+SHIFT+D</kbd></td>
+							<td>위 행 타겟 삽입</td>
+						</tr>
+						<tr title="위 칸의 내용을 복사합니다.">
+							<td><kbd>CTRL+INSERT</kbd></td>
+							<td>소스 삽입</td>
+						</tr>
+						<tr title="소스를 복사합니다.">
+							<td><kbd>CTRL+INS</kbd></td>
+							<td>좌 소스 따오기</td>
+						</tr>
+						<tr title="선택한 소스 타겟을 메모리에 저장합니다.">
+							<td><kbd>CTRL+Q</kbd></td>
+							<td>기록에 넣기</td>
+						</tr>
+						<tr title="빨강색 팁에서 1번~10번까지 퀵키로 현재칸에 복사 가능합니다.">
+							<td><kbd>CTRL+1~9</kbd></td>
+							<td>빨강색 가져오기</td>
+						</tr>
+						<tr title="빨강색 팀에서 위로 선택하여 현재칸에 삽입 가능합니다.">
+							<td><kbd>CTRL+UP</kbd></td>
+							<td>빨강색 위로 선택 입력</td>
+						</tr>
+						<tr title="빨강색 팀에서 아래로 선택하여 현재칸에 삽입 가능합니다.">
+							<td><kbd>CTRL+DOWN</kbd></td>
+							<td>빨강색 아래로 선택 입력</td>
+						</tr>
+						<tr title="하늘색 팀에서 1번~10번까지 퀵키로 현재칸에 복사 가능합니다.">
+							<td><kbd>ALT+1~9</kbd></td>
+							<td>파랑색 가져오기</td>
+						</tr>
+						<tr title="파랑색 팀에서 위로 선택하여 현재칸에 삽입 가능합니다.">
+							<td><kbd>ALT+UP</kbd></td>
+							<td>파랑색 위로 선택 입력</td>
+						</tr>
+						<tr title="파랑색 팀에서 아래로 선택하여 현재칸에 삽입 가능합니다.">
+							<td><kbd>ALT+DOWN</kbd></td>
+							<td>파랑색 아래로 선택 입력</td>
+						</tr>
+						<tr title="TARGET 복사">
+							<td><kbd>F3</kbd></td>
+							<td>타겟 복사</td>
+						</tr>
+						<tr title="마우스 우클릭으로 행을 삭제할 수 있습니다.
+		범위: 하늘색 팁, 빨강색 팁, 미션 번호.">
+							<td><kbd>MOUSE RIGHT</kbd></td>
+							<td>행 삭제(행수 클릭)</td>
+						</tr>
+					</table>
+					<a href="/tmx" target="_blank">smartcat tmx 파일전환</a>
+				</div>
+		</div>
+		<div id="clogs"></div>
+		<span id="clientsCount">1/1</span>
+</body>
+<style id="activestyle"></style>
+
+<script src="__01.paste.js"></script>
+
+<style id="chanheeMode">
+	#main>table {
+		display: grid !important;
+		grid-template-columns: 2fr;
+		grid-template-rows: 3em 30vh 6em 30vh auto;
+		grid-template-areas:
+			'utilWork utilTb'
+			'works statusDict'
+			'works utilTm'
+			'works tips'
+	}
+
+	tbody.util.work {
+		display: block !important;
+		grid-area: utilWork;
+	}
+
+	tbody.util.tb {
+		display: block !important;
+		grid-area: utilTb;
+	}
+
+	tbody.util.tm {
+		display: block !important;
+		grid-area: utilTm;
+	}
+
+	tbody#works {
+		display: block !important;
+		grid-area: works;
+		height: 100%;
+	}
+
+	tbody#statusDict {
+		display: block !important;
+		grid-area: statusDict;
+		background: #fffe;
+	}
+
+	tbody#tips {
+		display: block !important;
+		grid-area: tips;
+		background: #fffe;
+	}
+
+	#statusDict,
+	#tips,
+	#works {
+		resize: vertical;
+		height: 100% !important;
+	}
+
+	td#main {
+		padding: 0;
+	}
+
+	.target {
+		font-family: "Meiryo UI" !important;
+	}
+</style>
+
+</html>

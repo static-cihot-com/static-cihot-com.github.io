@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+</body>
+
+<script src="bson.js"></script>
+<script>
+
+	let { log } = console
+
+	function test() {
+		// Get the Long type
+		const Long = BSON.Long;
+
+		// Serialize document
+		const doc = { long: Long.fromNumber(100) }
+
+		// Serialize a document
+		const data = new BSON() .serialize(doc)
+		// De serialize it again
+		const doc_2 = new BSON() .deserialize(data)
+
+
+		log(doc, data, doc_2)
+	}
+
+	test()
+
+	let b = new BSON();
+
+
+
+</script>
+
+</html>
