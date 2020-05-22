@@ -1,0 +1,17 @@
+{
+	"name": "tm-core",
+	"short_name": "tm-core",
+	"start_url": "/tm-core/",
+	"theme_color": "#fff",
+	"background_color": "#fff",
+	"orientation": "portrait-primary",
+	"display": "standalone",
+	"scope": "/",
+	"icons": [
+		{
+			"src": "/SWlogo.png",
+			"type": "image/png",
+			"sizes": "144x144"
+		}
+	]
+}

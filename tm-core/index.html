@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>	<link rel="manifest" href="manifest.json">
+	<script type="module" src="/swpage.js"></script>
+</head>
+<style>
+	* {
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body {
+		padding: 4px;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: "source preview" "source target";
+		gap: 4px;
+	}
+
+	#source { grid-area: source; }
+	#target { grid-area: target; }
+	#preview { grid-area: preview; }
+
+	#source, #target, #preview {
+		border: 1px solid gray;
+		border-radius: 4px;
+	}
+
+	.word {
+		color: green;
+	}
+
+	#source, #target {
+		overflow: overlay;
+		border-radius: 4px;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	#source {
+		-webkit-user-modify: read-write-plaintext-only;
+	}
+</style>
+
+<body>
+	<div id="source" autofocus></div>
+	<div id="target"></div>
+	<div id="preview"></div>
+</body>
+<script type="module" src="index.js"></script>
+</html>
