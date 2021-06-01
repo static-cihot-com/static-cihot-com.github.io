@@ -7,3 +7,4 @@ let app = new VTTCue({
 })
 
 
+console.log(app)
