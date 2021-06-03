@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<meta href="index.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
 </head>
 <body>
-
+	<div id="app">
+		<todo-item></todo-item>
+		<todo-parent>
+			<todo-item></todo-item>
+		</todo-parent>
+	</div>
 	<script src="index.js"></script>
 </body>
 </html>

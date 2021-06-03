@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p v-if="type=='A'">A</p>
+		<p v-else-if="type=='B'">B</p>
+		<p v-else-if="type=='C'">C</p>
+		<p v-else>D</p>
+	</div>
+	<script>
+		let vm = new Vue({
+			el:'#app',
+			data: {
+				type:'A'
+			}
+		})
+
+		vm.type = 'D'
+	</script>
+</body>
+</html>
