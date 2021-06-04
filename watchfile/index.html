@@ -9,19 +9,8 @@
 <script src="vue.min.js"></script>
 </head>
 <body>
-	<form id="app">
-		<table>
-			<tbody>
-				<tr>
-					<td><label for="filename">filename</label></td>
-					<td><input id="filename" v-model="filename"></td>
-				</tr>
-				<tr>
-					<td><label for="url">url</label></td>
-					<td><input id="url" v-model="url"></td>
-				</tr>
-			</tbody>
-		</table>
+
+	<form id="app" v-on:submit.prevent="submit">
 		<table>
 			<thead>
 				<tr>
@@ -30,7 +19,16 @@
 					<td>unwatch</td>
 				</tr>
 			</thead>
-			<tbody>
+
+			<tbody id="add-watch-file">
+				<tr>
+					<td><input id="filename" v-model="filename"></td>
+					<td><input id="url" v-model="url"></td>
+					<td><input type="submit" value="watch"></td>
+				</tr>
+			</tbody>
+			
+			<tbody id="watch-files">
 				<tr v-for="w in ws">
 					<td v-text="w.filename"></td>
 					<td v-text="w.url"></td>

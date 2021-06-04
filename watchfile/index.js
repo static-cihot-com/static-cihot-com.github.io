@@ -20,7 +20,10 @@ let vm = new Vue({
 	},
 	methods: {
 		unwatch(event){
-
+			
+		},
+		submit(){
+			console.log(this)
 		}
 	}
 })

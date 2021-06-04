@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<!--<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+	<script src="http://unpkg.com/vue@2.5.17"></script>
+</head>
+
+<body>
+	<div id="app">
+		<p>{{ items[0] }}</p>
+		<p>{{ items[1] }}</p>
+		<p>{{ items[2] }}</p>
+
+		<button v-on:click.prevent="onBottonLeftDown" v-on:contextmenu.prevent="onButtonRgithDown">change items[0]</button>
+	</div>
+
+	<script>
+		let data = {
+			msg: 'b',
+			items: [
+				{ name: '2bytescorp', ymd: 20200525 },//object
+				'2bytescorp',//string
+				20200525,//number
+			],
+			onBottonLeftDown(event) {
+				event.preventDefault()
+				event.stopPropagation()
+				vm.items[1] = `**${randstr()}**`
+				console.log('button mouse left down', vm.items)
+			},
+			onButtonRgithDown(event) {
+				event.preventDefault()
+				event.stopPropagation()
+				vm.items[0] = `**${randstr()}**`
+				console.log('button mouse right down', vm.items)
+			},
+		}
+		let vm = new Vue({
+			data
+		})
+
+		vm.$mount('#app')
+
+		vm.$watch(function () {
+			console.log(vm.items)
+			return vm.items[0]
+		}, function (...d) {
+			console.log(d)
+		})
+
+		addEventListener('click', () => {
+			vm.items[0].name = `--${randstr()}--`
+			vm.items[0].ymd = `--${randstr()}--`
+
+			vm.items[1] = `--${randstr()}--`
+
+			vm.items[2] = `--${randstr()}--`
+
+			console.log('window mouse left down', vm.items)
+		})
+
+		addEventListener('contextmenu', (event) => {
+			event.preventDefault()
+			event.stopPropagation()
+			console.log('window mouse right down', vm.items)
+		})
+
+		function randstr() {
+			return Math.random().toString(36).slice(2)
+		}
+
+
+
+	</script>
+</body>
+
+</html>
