@@ -28,7 +28,7 @@
 
 
 	<!-- 사용자 목록 페이지 템플릿 -->
-	<script type="x-template" id="user-list">
+	<template id="user-list">
 		<div>
 			<div class="loading" v-if="loading">로딩 중...</div>
 			<div v-if="error" class="error">
@@ -38,10 +38,10 @@
 				<router-link :to="{ path: '/users/' + user.id }">{{ user.name }}</router-link>
 			</div>
 		</div>
-	</script>
+	</template>
 
 	<!-- 사용자 상세 정보 페이지 템플릿 -->
-	<script type="x-template" id="user-detail">
+	<template id="user-detail">
 		<div>
 			<div class="loading" v-if="loading">로딩 중...</div>
 			<div v-if="error" class="error">
@@ -52,10 +52,10 @@
 				<p>{{ user.description }}</p>
 			</div>
 		</div>
-	</script>
+	</template>
 
 	<!-- 신규 사용자 등록 페이지 템플릿 -->
-	<script type="x-template" id="user-create">
+	<template id="user-create">
 		<div>
 			<div class="sending" v-if="sending">Sending...</div>
 			<div>
@@ -76,10 +76,10 @@
 				</div>
 			</div>
 		</div>
-	</script>
+	</template>
 
 	<!-- 로그인 페이지 템플릿 -->
-	<script type="x-template" id="login">
+	<template id="login">
 		<div>
 			<h2>Login</h2>
 			<p v-if="$route.query.redirect">
@@ -92,7 +92,7 @@
 				<p v-if="error" class="error">로그인에 실패했습니다</p>
 			</form>
 		</div>
-	</script>
+	</template>
 
 
 	<script type="text/javascript">
@@ -212,6 +212,7 @@
 					this.loading = true
 					getUsers((function (err, users) {
 						this.loading = false
+						//this.error = 'trhow Error'
 						if (err) {
 							this.error = err.toString()
 						} else {
@@ -375,6 +376,8 @@
 			},
 			router: router
 		}).$mount('#app')
+
+
 
 	</script>
 </body>
