@@ -4,8 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<!--<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+	<script>const module=window</script>
 	<script src="vue.min.js"></script>
 	<script src="vue-router.min.js"></script>
+	<script src="//unpkg.com/animejs"></script>
 	<!--<script src="http://localhost:8098"></script>-->
 	<style>
 		.v-enter-active {
@@ -33,16 +35,7 @@
 	<div id="app">
 		<button v-on:click="isShown = ! isShown">{{ isShown ? 'Hide' : 'Show' }}</button>
 
-		<transition
-			v-on:before-enter="print"
-			v-on:enter="print"
-			v-on:after-enter="print"
-			v-on:enter-cancelled="print"
-			v-on:before-leave="print"
-			v-on:leave="print"
-			v-on:after-leave="print"
-			v-on:leave-cancelled="print"
-		>
+		<transition>
 			<p v-show="isShown">P-transition</p>
 		</transition>
 	</div>
@@ -54,11 +47,6 @@
 			data: function () {
 				return {
 					isShown: true
-				}
-			},
-			methods: {
-				print(el) {
-					console.log(el, el.className)
 				}
 			}
 		})

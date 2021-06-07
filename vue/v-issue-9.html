@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script>const module = window</script>
+	<script src="vue.min.js"></script>
+	<script src="vue-router.min.js"></script>
+	<script src="anime.min.js"></script>
+</head>
+
+<body>
+
+	<template id="todo-list">
+		<ul>
+			<template v-for="todo in todos">
+				<li v-bind:key="todo.id" v-if="todo.isCompleted">
+					<!-- 非 slot 标签只要 props 即可 -->
+					<p>N) {{todo.text}}</p>
+
+					<!-- slot 标签还要 v-bind 和模板中设置 slot-scope -->
+					<slot v-bind:key="todo.id" v-bind:todo="todo" name="A"></slot>
+					<slot v-bind:key="todo.id" v-bind:todo="todo" name="B"></slot>
+
+				</li>
+			</template>
+		</ul>
+	</template>
+
+	<div id="app">
+		<todo-list v-bind:todos="todos">
+			<p slot="A" slot-scope="slotScope" v-if="slotScope.todo.isCompleted">
+				A) {{ slotScope.todo.text }}
+			</p>
+			<p slot="B" slot-scope="{ todo }" v-if="todo.isCompleted">
+				B) {{ todo.text }}
+			</p>
+			<!--
+				无法读取todo，缺少slot-scope。
+				<p slot="C">
+					C) {{ todo }}
+				</p>
+			-->
+		</todo-list>
+	</div>
+
+	<script>
+		let vm = new Vue({
+			el: '#app',
+			data: function () {
+				return {
+					todos: [
+						{ id: 1, text: 'C++', isCompleted: true },
+						{ id: 2, text: 'JavaScript', isCompleted: !true },
+						{ id: 3, text: 'Java', isCompleted: true },
+						{ id: 4, text: 'Perl', isCompleted: !true },
+					],
+				}
+			},
+			components: {
+				'todo-list': {
+					template: '#todo-list',
+					props: {
+						todos: {
+							type: Array,
+							require: true,
+						},
+						todo: {
+							type: Object
+						}
+					},
+				},
+			},
+		})
+
+
+	</script>
+
+
+</body>
+
+</html>

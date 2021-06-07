@@ -12,65 +12,48 @@
 
 <body>
 	<div id="app">
-		<p>{{ item0 }}</p>
-		<p>{{ item1 }}</p>
-		<p>{{ item2 }}</p>
-		<button v-on:click="onBottonLeftDown">change items[0]</button>
+		<p>{{ items[0] }}</p>
+		<p>{{ items[1] }}</p>
+		<p>{{ items[2] }}</p>
+		<button
+			v-on:mouseup="onClick"
+		>change items</button>
 	</div>
 
 	<script>
-		let data = {
-			msg: 'b',
-			items: [
-				{ name: '2bytescorp', ymd: 20200525 },//object
-				'2bytescorp',//string
-				20200525,//number
-			],
-		}
-		let methods = {
-			onBottonLeftDown(event) {
-				console.log('button left click', this)
-				//event.preventDefault()
-				//event.stopPropagation()
-				this.items[1] = `좌클릭-${randstr()}`
-				console.log('button mouse left down', vm.items)
-			},
-			onButtonRgithDown(event) {
-				//event.preventDefault()
-				//event.stopPropagation()
-				this.items[0] = `우클릭${randstr()}`
-				console.log('button mouse right down', vm.items)
-			},
-		}
-		let computed = {
-			item0() { return this.items[0] },
-			item1() { return this.items[1] },
-			item2() { return this.items[2] },
-		}
 		let vm = new Vue({
 			el: '#app',
-			data,
-			methods,
-			computed
-		})
-
-		//vm.$mount('#app')
-
-		vm.$watch(function () {
-			console.log(vm.items)
-			return vm.items[0]
-		}, function (...d) {
-			console.log(d)
-		})
-
-		function counter() {
-			if(typeof counter.i !== 'number') {
-				counter.i = 0
+			data: {
+				i: 0,
+				msg: 'b',
+				items: [
+					{ name: '2bytescorp', ymd: 20200525 },//object
+					'2bytescorp',//string
+					20200525,//number
+				],
+			},
+			methods: {
+				onClick(event) {
+					if(event.button===2) {
+						event.preventDefault()
+						event.stopPropagation()
+						this.items[1] = `우클릭-${ ++this.i }`
+					}else{
+						this.items[1] = `좌클릭-${ ++this.i }`
+					}
+					console.log(this.items, event.button)
+				},
+				onButtonRgithDown(event) {
+					this.items[0] = `우클릭${ ++this.i }`
+					console.log(this.items)
+				},
+			},
+			computed: {
+				item0() { return this.items[0] },
+				item1() { return this.items[1] },
+				item2() { return this.items[2] },
 			}
-			return ++counter.i
-		}
-
-
+		})
 
 	</script>
 </body>

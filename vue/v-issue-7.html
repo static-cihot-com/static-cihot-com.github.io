@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script>const module = window</script>
+	<script src="vue.min.js"></script>
+	<script src="vue-router.min.js"></script>
+	<script src="anime.min.js"></script>
+</head>
+
+<body>
+
+	<template id="my-button">
+		<button>
+			<slot name="span-slot"></slot>
+			<slot>OK</slot>
+		</button>
+	</template>
+
+	<template id="my-span">
+		<span>
+			{{ shown ? '+' : '-' }}
+			span:
+			<slot name="slot-name">[No slot-name]</slot>
+			<slot>span</slot>
+		</span>
+	</template>
+
+	<div id="app">
+		<nav>
+			<my-button><span>+</span>전송</my-button>
+			<my-button>
+				<my-span v-bind:shown="isShown">
+					<b slot="slot-name">Has slot-name</b>
+					ok
+				</my-span>
+			</my-button>
+		</nav>
+		<main>
+			<my-span></my-span>
+		</main>
+	</div>
+
+	<script>
+
+		let vm = new Vue({
+			el: '#app',
+			data: function () {
+				return {
+					isShown: true
+				}
+			},
+			components: {
+				'my-button': {
+					template: '#my-button',
+				},
+				'my-span': {
+					template: '#my-span',
+					props: ['shown'],
+					watch: {
+						shown(...s){
+							console.log('watch', s)
+							this.$emit('eee')
+						}
+					}
+				}
+			}
+		})
+
+		vm.$on('eee', function(...s){
+			console.log('$on', s)
+		})
+
+	</script>
+
+
+	<template>
+		<address></address>
+		<article>
+			<header></header>
+			<main></main>
+			<aside></aside>
+			<footer></footer>
+		</article>
+		<section></section>
+		<map>
+			<area>
+			<img>
+		</map>
+		<audio></audio>
+		<video></video>
+		<canvas></canvas>
+		<track>
+
+		<table>
+			<caption>표의 설명 또는 제목</caption>
+			<thead>
+				<tr>
+					<th>값1</th>
+					<th>값2</th>
+					<th>값3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>d1-1</td>
+					<td>d1-2</td>
+					<td>d1-3</td>
+				</tr>
+				<tr>
+					<td>d2-1</td>
+					<td>d2-2</td>
+					<td>d2-3</td>
+				</tr>
+			</tbody>
+			<tfoot></tfoot>
+			<tr></tr>
+		</table>
+	</template>
+
+
+
+</body>
+
+</html>
