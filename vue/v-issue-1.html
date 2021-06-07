@@ -4,54 +4,72 @@
 <head>
 	<meta charset="UTF-8">
 	<!--<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
-	<script src="http://unpkg.com/vue@2"></script>
+	<!--<script src="http://unpkg.com/vue@2"></script>
+	<script src="http://unpkg.com/vue-router@3"></script>-->
+	<script src="/vue.min.js"></script>
+	<script src="/vue-router.min.js"></script>
 </head>
 
 <body>
-	<div id="app1">
-		<p>{{ items[0] }}</p>
-		<p>{{ items[1] }}</p>
-		<p>{{ items[2] }}</p>
+	<div id="app">
+		<p>{{ item0 }}</p>
+		<p>{{ item1 }}</p>
+		<p>{{ item2 }}</p>
+		<button v-on:click="onBottonLeftDown">change items[0]</button>
 	</div>
 
 	<script>
-		var vm = new Vue({
-			el: '#app1',
-			data: {
-				msg: 'b',
-				items: [
-					{ name: '2bytescorp', ymd: 20200525 },//object
-					'2bytescorp',//string
-					20200525,//number
-				]
-			}
+		let data = {
+			msg: 'b',
+			items: [
+				{ name: '2bytescorp', ymd: 20200525 },//object
+				'2bytescorp',//string
+				20200525,//number
+			],
+		}
+		let methods = {
+			onBottonLeftDown(event) {
+				console.log('button left click', this)
+				//event.preventDefault()
+				//event.stopPropagation()
+				this.items[1] = `좌클릭-${randstr()}`
+				console.log('button mouse left down', vm.items)
+			},
+			onButtonRgithDown(event) {
+				//event.preventDefault()
+				//event.stopPropagation()
+				this.items[0] = `우클릭${randstr()}`
+				console.log('button mouse right down', vm.items)
+			},
+		}
+		let computed = {
+			item0() { return this.items[0] },
+			item1() { return this.items[1] },
+			item2() { return this.items[2] },
+		}
+		let vm = new Vue({
+			el: '#app',
+			data,
+			methods,
+			computed
 		})
 
-		addEventListener('click',()=>{
-			vm.items[0].name = '***'+Math.random()
-			vm.items[0].ymd = '***'+Math.random()
-	
-			vm.items[1] = '***'+Math.random()
-	
-			vm.items[2] = '***'+Math.random()
-		})
+		//vm.$mount('#app')
 
-		addEventListener('contextmenu',(event)=>{
-			event.preventDefault()
+		vm.$watch(function () {
 			console.log(vm.items)
+			return vm.items[0]
+		}, function (...d) {
+			console.log(d)
 		})
 
-		/* 
-		chrome에서 F12로 console을 연 후,
-		아래 코드를 실행하면 DOM에서 변화를 일으키지 않는다.
+		function counter() {
+			if(typeof counter.i !== 'number') {
+				counter.i = 0
+			}
+			return ++counter.i
+		}
 
-		vm.items[1] = '-------'
-
-		아래 코드를 실행하면 DOM에서 변화를 일으키지 않는다
-
-		vm.items[0] = '-------'
-		*/
-		
 
 
 	</script>
