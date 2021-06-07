@@ -21,6 +21,8 @@
 	<div id="app">
 		<p v-bind:class="arr">arr</p>
 		<p v-bind:class="obj">obj</p>
+		<input type="text" v-model="text">
+		<input type="number" v-model="number">
 	</div>
 
 	<script>
@@ -30,6 +32,9 @@
 				return {
 					arr: ['a', 'b', 'c'],
 					obj: {a:true, b:!true, c:true },
+
+					text: 'string',
+					number: 123
 				}
 			}
 		})
