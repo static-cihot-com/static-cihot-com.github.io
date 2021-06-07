@@ -11,12 +11,28 @@
 
 <body>
 
+	<style>
+		.a { color: red; }
+		.b { background-color: yellow; }
+		.c { font-weight: bold; }
+	</style>
+
+
 	<div id="app">
-		
+		<p class="arr"></p>
+		<p class="obj"></p>
 	</div>
 
 	<script>
-		
+		let vm = new Vue({
+			el:'#app',
+			data(){
+				return {
+					arr: ['a', 'b', 'c'],
+					obj: {a:true, b:true, c:false },
+				}
+			}
+		})
 	</script>
 
 </body>
