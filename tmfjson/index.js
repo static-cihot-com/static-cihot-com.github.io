@@ -28,7 +28,9 @@ let vm = new Vue({
 				let file = files.item(i)
 				vm.files.push(file)
 				readfile(file)
-					.then(function(d){})
+					.then(function(d){
+						console.log(d)
+					})
 					.catch(function(d){})
 			}
 			
