@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script>const module = window</script>
+	<script src="vue.min.js"></script>
+	<script src="vue-router.min.js"></script>
+	<script src="anime.min.js"></script>
+</head>
+
+<body>
+
+	<style>
+		.a { color: red; }
+		.b { background-color: yellow; }
+		.c { font-weight: bold; }
+	</style>
+
+
+	<div id="app">
+		<p v-bind:class="arr">arr</p>
+		<p v-bind:class="obj">obj</p>
+		<input type="text" v-model="text">
+		<input type="number" v-model="number">
+	</div>
+
+	<script>
+		let vm = new Vue({
+			el:'#app',
+			data(){
+				return {
+					arr: ['a', 'b', 'c'],
+					obj: {a:true, b:!true, c:true },
+
+					text: 'string',
+					number: 123
+				}
+			}
+		})
+	</script>
+
+</body>
+
+</html>
