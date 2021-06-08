@@ -29,22 +29,55 @@ let vm = new Vue({
 				let file = files.item(i)
 				vm.files.push(file)
 				readfile(file)
-					.then(function(d){
-						//console.log(d)
-						let refs = makeRefs(d)
-						//console.log(refs)
+					.then(function(text){
+						file.refs = makeRefs(text)
+						file.text = text
 					})
 					.catch(function(d){
 
 					})
 			}
-			
+		},
+		onTransferFile(file){
+			let vm = this
+			let { refs } = file
+			let refsLength = refs.length
+			let refsNew = []
+
+			for(let i=0, {length}=refs; i<length; i++) {
+				let ref = refs[i]
+				let { text, start, end } = ref
+				toCN(text, function(d){
+					if(typeof d==='string') {
+						refsNew[i] = {
+							text: d,
+							start,
+							end
+						}
+
+						let refsNewLength = refsNew.length
+						if(refsLength === refsNewLength) {
+							//console.log(refsNewLength, refsNew[refsNewLength-1])
+							//let textNew = makeStr(file.text, refsNew)
+							//console.log(textNew)
+							//console.log('[OK]', textNew.length)
+						}else{
+							//console.log('[PG]', refsNewLength, '/', refsLength)
+						}
+						
+					}else{
+						//progress
+					}
+				})
+				//break
+			}
 		}
 	},
 	created(){
+		let vm = this
 		init().then(function(){
 			console.log('[OK] dict download.')
-			this.isReadyDict = true
+			vm.isReadyDict = true
 		})
 	}
 })

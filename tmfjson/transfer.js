@@ -75,40 +75,9 @@ function dictionaryFilter(arr) {
 
 function resetTermForCNKey() {
 	let term = {}
-	let results = []
-	if (dict0input.checked) {
-		results.push('0')
-		dict0.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dict1input.checked) {
-		results.push('1')
-		dict1.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dict_input.checked) {
-		results.push('_')
-		dict_.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dictONEinput.checked) {
-		results.push('ONE')
-		dictONE.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dictGNSSinput.checked) {
-		results.push('GNSS')
-		dictGNSS.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dictPOTCinput.checked) {
-		results.push('POTC')
-		dictPOTC.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dictGODinput.checked) {
-		results.push('GOD')
-		dictGOD.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	if (dictGBTWinput.checked) {
-		results.push('GBTW')
-		dictGBTW.forEach(([cn, tw]) => term[cn] = tw)
-	}
-	console.log(results)
+	dict0.forEach(([cn, tw]) => term[cn] = tw)
+	dict1.forEach(([cn, tw]) => term[cn] = tw)
+	dict_.forEach(([cn, tw]) => term[cn] = tw)
 	term = Object.entries(term)
 	term = dictionarySort(term)
 	term = dictionaryFilter(term)
@@ -116,46 +85,37 @@ function resetTermForCNKey() {
 }
 function resetTermForTWKey() {
 	let term = {}
-	let results = []
-	if (dict0input.checked) {
-		results.push('0')
-		dict0.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dict1input.checked) {
-		results.push('1')
-		dict1.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dict_input.checked) {
-		results.push('_')
-		dict_.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dictONEinput.checked) {
-		results.push('ONE')
-		dictONE.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dictGNSSinput.checked) {
-		results.push('GNSS')
-		dictGNSS.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dictPOTCinput.checked) {
-		results.push('POTC')
-		dictPOTC.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dictGODinput.checked) {
-		results.push('GOD')
-		dictGOD.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	if (dictGBTWinput.checked) {
-		results.push('GBTW')
-		dictGBTW.forEach(([cn, tw]) => term[tw] = cn)
-	}
-	console.log(results)
+	dict0.forEach(([cn, tw]) => term[tw] = cn)
+	dict1.forEach(([cn, tw]) => term[tw] = cn)
+	dict_.forEach(([cn, tw]) => term[tw] = cn)
 	term = Object.entries(term)
 	term = dictionarySort(term)
 	term = dictionaryFilter(term)
-
 	return term
 }
+
+
+function toCN(text, onmessage) {
+	let worker = new Worker('./worker.js')
+	worker.addEventListener('message', function (e) {
+		let { data } = e
+		//data 剩余字符串长度或转换结果字符串
+		onmessage(data)
+	})
+	let term = resetTermForTWKey()
+	worker.postMessage([text, term])
+}
+
+function toTW(text, onmessage) {
+	let worker = new Worker('./worker.js')
+	worker.addEventListener('message', function (e) {
+		let { data } = e
+		onmessage(data)
+	})
+	let term = resetTermForCNKey()
+	worker.postMessage([text,term])
+}
+
 
 
 //let cn = document.getElementById('cn')
@@ -163,10 +123,10 @@ function resetTermForTWKey() {
 //if (!cn.hasAttribute('autofocus')) cn.focus()
 //let worker = null
 //let timeout
-function delayRun(func, ms = 500) {
-	clearTimeout(timeout)
-	timeout = setTimeout(func, ms)
-}
+//function delayRun(func, ms = 500) {
+//	clearTimeout(timeout)
+//	timeout = setTimeout(func, ms)
+//}
 //cn.addEventListener('input', () => {
 //	if (worker instanceof Worker) worker.terminate()
 //	delayRun(() => {
@@ -253,11 +213,11 @@ document.addEventListener('contextmenu', function (event) {
 		event.preventDefault()
 
 		let arr = [
-			['id', 'cn','tw'],
+			['id', 'cn', 'tw'],
 		]
-		let ids = [101,102,103]
-		let cns = ['国文1','国文2','国文3']
-		let tws = ['國文1','國文2','國文3']
+		let ids = [101, 102, 103]
+		let cns = ['国文1', '国文2', '国文3']
+		let tws = ['國文1', '國文2', '國文3']
 		let len = Math.max(cns.length, tws.length)
 		for (let i = 0; i < len; i++) {
 			arr.push([
@@ -275,7 +235,7 @@ document.addEventListener('contextmenu', function (event) {
 		let table = html.querySelector('table')
 		let wb = XLSX.utils.table_to_book(table, { sheet: 'Sheet1' })
 
-		
+
 		let filename = 'demo.xlsx'
 
 		XLSX.writeFile(wb, filename)

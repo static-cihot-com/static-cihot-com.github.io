@@ -20,13 +20,22 @@
 			class="container-sm"
 			v-for="file in files"
 		>
-			<div class="row">
+			<div class="row border bg-light">
 				<div class="col">{{ file.name }}</div>
 				<div class="col">{{ file.size }}</div>
 				<!--<div class="col">{{ file.lastModifiedDate }}</div>-->
 				<div class="col">
-					<button v-bind:disabled="!isReadyDict">전환</button>
+					<button
+						type="button"
+						class="btn btn-primary"
+						v-bind:disabled="!isReadyDict"
+						v-on:click="onTransferFile(file)"
+					>전환</button>
 				</div>
+			</div>
+			<div class="row">
+				<code class="col border bg-dark">{{file.text}}</code>
+				<code class="col border bg-dark">{{file.textNew}}</code>
 			</div>
 		</div>
 	</div>

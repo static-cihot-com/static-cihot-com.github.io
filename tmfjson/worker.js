@@ -7,7 +7,6 @@ let strTotalLength = 0
 // term = term.filter(e => Array.isArray(e) && (typeof e[0] === 'string' && e[0].length > 0) && (typeof e[1] === 'string' && e[1].length > 0))
 
 function one(str) {
-	//console.count('a')
 	let ret, a, b, cntw
 	for (let row of term) {
 		a = row[0]
@@ -48,46 +47,26 @@ function transfer(str) {
 		// 	s[percent] = true;
 		// 	self.postMessage(str.length+percent/100);
 		// }
-		if (IS_NODEJS) {
-			// console.log(str.length);
-		} else {
-			self.postMessage(str.length)
-		}
+
+		//广播进度（剩余字符串数量）
+		//	self.postMessage(str.length)
 	}
 	return ret
 }
-let toCN = (jianti = function (str) {
-	return transfer(str, true)
-})
-let toTW = (fanti = function (str) {
-	return transfer(str, false)
-})
 
-if (IS_NODEJS) {
-	// nodejs
-	module.exports = {
-		toCN,
-		toTW,
-		one,
-		transfer,
-		setTerm(arr) {
-			if (!Array.isArray(arr)) throw new TypeError(arr)
-			term = arr
-		},
+
+self.addEventListener('message', function (d) {
+	let { data } = d
+	let [sourceText, termArray] = data
+	//console.log(termArray.slice(0, 10).join('\n') + '...')
+	if (Array.isArray(data) && data.length == 2 && Array.isArray(termArray)) {
+		term = termArray
+		let result = transfer(sourceText, termArray)
+		console.log(sourceText, result)
+		self.postMessage(result)
+	} else {
+		console.warn('错误')
+		self.close()
 	}
-} else {
-	self.addEventListener('message', function (d) {
-		let { data } = d
-		let [sourceText, termArray] = data
+})
 
-		//console.log(termArray.slice(0, 10).join('\n') + '...')
-
-		if (Array.isArray(data) && data.length == 2 && Array.isArray(termArray)) {
-			term = data[1]
-			let result = transfer.apply(null, data)
-			self.postMessage(result)
-		} else {
-			console.warn('错误')
-		}
-	})
-}
