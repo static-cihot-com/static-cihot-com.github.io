@@ -18,12 +18,10 @@ function makeRefs(d) {
 		let end = start + text.length
 		refs.push({ text, start, end })
 	}
-
 	return refs
 }
 
 function makeStr(d, refs){
-
 	let rs = refs.reduceRight((r, e, i)=>{
 		let { text, start, end } = e
 		text = `【${e.text}】`
@@ -37,8 +35,6 @@ function makeStr(d, refs){
 
 		return r
 	}, { result:'', input: d })
-
 	return rs.result
 }
-
 

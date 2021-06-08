@@ -8,8 +8,6 @@
 	<script src="/lib/vue.js"></script>
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<title>CN-TW</title>
 </head>
 
 <body>
@@ -27,11 +25,12 @@
 				<div class="col">{{ file.size }}</div>
 				<!--<div class="col">{{ file.lastModifiedDate }}</div>-->
 				<div class="col">
-					<button v-bind:disabled="!file.ready">전환</button>
+					<button v-bind:disabled="!isReadyDict">전환</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="transfer.js"></script>
 	<script src="index.js"></script>
 </body>
 
