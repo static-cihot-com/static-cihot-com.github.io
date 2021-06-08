@@ -1,0 +1,16 @@
+.dropzone {
+	width: 200px;
+	min-height: 20px;
+	background: blueviolet;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.item {
+	text-align: center;
+	min-height: 2em;
+	border: 1px solid white;
+	background: yellow;
+	user-select: none;
+	width: 180px;
+}

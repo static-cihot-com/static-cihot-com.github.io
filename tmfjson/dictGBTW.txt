@@ -1,0 +1,233 @@
+贵宾	VIP
+布置	配置
+登录	登入
+通过	透過
+槽位	欄位
+邮箱	信箱
+邮件	信件
+加强版	PLUS
+周	週
+阿玛达	Armada
+鬼怪二式	F-4P II
+海盗二式	A-7C II
+鞭挞者23	FLOGGER 23
+雄猫14	F-14ST
+幻影2000	M-2000
+大黄蜂18	F-18H
+超黄蜂18	SUPER F-18H
+侧卫33	FLANKER 33
+侧卫27	FLANKER 27
+战隼16	F-16FF
+沙漠隼16	DESERT F-16FF
+法国阵风	RF-M
+打击鹰15	STRIKE F-15EA
+鹞式	HARRIER
+支点29	FULCRUM 29
+台风2000	EF2000
+金鹰50	KFA-50
+捕狐犬31	Foxhound 31
+捕狐犬31	FOXHOUND 31
+疣猪10	A10C
+虎式14	F-14 TIGER
+雷雨	THUNDERSTORM
+雷雨35	F-35 THUNDERSTORM
+鹰狮39	Griffin 39
+狂风	IDS
+幽灵	EF GHOST
+虎鲨	TIGERSHARK
+1级	Lv.1
+2级	Lv.2
+3级	Lv.3
+4级	Lv.4
+5级	Lv.5
+6级	Lv.6
+7级	Lv.7
+8级	Lv.8
+9级	Lv.9
+10级	Lv.10
+11级	Lv.11
+12级	Lv.12
+13级	Lv.13
+14级	Lv.14
+15级	Lv.15
+16级	Lv.16
+17级	Lv.17
+18级	Lv.18
+19级	Lv.19
+20级	Lv.20
+21级	Lv.21
+22级	Lv.22
+23级	Lv.23
+24级	Lv.24
+25级	Lv.25
+26级	Lv.26
+27级	Lv.27
+28级	Lv.28
+29级	Lv.29
+30级	Lv.30
+31级	Lv.31
+32级	Lv.32
+33级	Lv.33
+34级	Lv.34
+35级	Lv.35
+36级	Lv.36
+37级	Lv.37
+38级	Lv.38
+39级	Lv.39
+40级	Lv.40
+41级	Lv.41
+42级	Lv.42
+43级	Lv.43
+44级	Lv.44
+45级	Lv.45
+46级	Lv.46
+47级	Lv.47
+48级	Lv.48
+49级	Lv.49
+50级	Lv.50
+51级	Lv.51
+52级	Lv.52
+53级	Lv.53
+54级	Lv.54
+55级	Lv.55
+56级	Lv.56
+57级	Lv.57
+58级	Lv.58
+59级	Lv.59
+60级	Lv.60
+61级	Lv.61
+62级	Lv.62
+63级	Lv.63
+64级	Lv.64
+65级	Lv.65
+66级	Lv.66
+67级	Lv.67
+68级	Lv.68
+69级	Lv.69
+70级	Lv.70
+71级	Lv.71
+72级	Lv.72
+73级	Lv.73
+74级	Lv.74
+75级	Lv.75
+76级	Lv.76
+77级	Lv.77
+78级	Lv.78
+79级	Lv.79
+80级	Lv.80
+81级	Lv.81
+82级	Lv.82
+83级	Lv.83
+84级	Lv.84
+85级	Lv.85
+86级	Lv.86
+87级	Lv.87
+88级	Lv.88
+89级	Lv.89
+90级	Lv.90
+91级	Lv.91
+92级	Lv.92
+93级	Lv.93
+94级	Lv.94
+95级	Lv.95
+96级	Lv.96
+97级	Lv.97
+98级	Lv.98
+99级	Lv.99
+100级	Lv.100
+美国113式	M113
+苏联55型	T-55
+美国110型	M110
+苏联履带式2型	BMP-2
+美国巴顿	M60
+帕拉丁109型	Paladin109
+布拉德利	Bradley
+豹二-5型	LEO2A5
+韩国雷声9式	K-9 Thunder
+1128型	IFV 1128
+主战1式2型	MBT1A2
+德国2000型	P2000
+36突击步枪	AR36
+40系列7型狙击步枪 	SR40A7
+4系列1型卡宾枪 	AR4A1
+海军型冲锋枪	SMG5N
+25式榴弹枪	GN25
+19型手枪	HG19
+45手枪	HG45
+1911式手枪	HG1911
+92型手枪	HG92
+23型手枪	HG23
+陶式	TOW
+德维纳	Dvina
+米兰	Milan
+霍克	Hawk
+标枪	Javelin
+爱国者-3	PAC-3
+雷博特	Raybolt
+凯旋	Triumf
+地狱火	Hellfire
+黄金贵宾	VVIP
+世界标准时间	UTC
+粮库	PX
+闪电二式	F-35 LTII
+改进型	Batch
+第一批改进型	Batch I
+鹰式15	F-15 Strike
+隐身57	PF-57
+加倍	HOTX2
+游戏管理员	GM
+百万	 M
+千	 K
+毫米	 mm
+文件	檔案
+几率	機率
+支点35	Fulcrum 35
+闪电二式	F-35 LT II
+长度	Length
+羽翼宽度	Wingspan
+最大起飞重量	Max takeoff weight
+实用升限	Service ceiling
+挂架	Hard Point
+无燃料补给可移动距离	Range whitout refueling
+最大过载	Max overload
+人数	Crew
+闪电二式	F-35 LT II
+传奇一	傳奇I
+传奇二	傳奇II
+传奇三	傳奇III
+传奇四	傳奇IV
+传奇五	傳奇V
+美国23型战斗手枪	Mk.23_sil
+(一)	I
+(二)	II
+(三)	III
+(四)	IV
+(五)	V
+(六)	VI
+(七)	VII
+(八)	VIII
+(九)	IX
+(十)	X
+(一)	Ⅰ
+(二)	Ⅱ
+(三)	Ⅲ
+(四)	Ⅳ
+(五)	Ⅴ
+(六)	Ⅵ
+(七)	Ⅶ
+(八)	Ⅷ
+(九)	Ⅸ
+(十)	Ⅹ
+特制钥匙	特製鑰匙
+主菜单	主選單
+累计	累積
+鹰式15	F-15EA
+[全新]	NEW
+军衔	軍階
+虎式疣猪10	A10 TIGER-HOG
+咆哮者	GROWLER
+炮艇战: 军团之争	軍團之爭 全面開戰
+炮艇战: 军团之争	軍團之爭全面開戰
+闪电二式	F-35 LT Ⅱ
+打击鹰15	Strike F-15EA
+突袭队的密闭式潜水装置	突襲隊的密閉式潛水裝置

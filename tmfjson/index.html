@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<!--<script src="/isChrome.js"></script>-->
+	<script src="xlsx.full.min.js"></script>
+	<script src="/lib/vue.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>CN-TW</title>
+</head>
+
+<body>
+	<div id="app" class="container-fluid"
+		v-on:drop.prevent.stop="onDropFile"
+		v-on:dragover.prevent
+		v-on:dragstart.prevent
+	>
+		<div
+			class="container-sm"
+			v-for="file in files"
+		>
+			<div class="row">
+				<div class="col">{{ file.name }}</div>
+				<div class="col">{{ file.size }}</div>
+				<!--<div class="col">{{ file.lastModifiedDate }}</div>-->
+				<div class="col">
+					<button v-bind:disabled="!file.ready">전환</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>

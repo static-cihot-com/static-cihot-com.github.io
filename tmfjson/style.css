@@ -1,0 +1,89 @@
+:root{
+	--bg-color: #336;
+	--radius: 9.33px;
+}
+* {
+	user-select: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#app {
+	height: 100vh;
+	margin: 0 2em;
+	padding: 0;
+	display:grid;
+	grid-template-areas: "dicts" "texts" "workers";
+	grid-template-rows: 3em auto 2em;
+	grid-gap: 3px;
+}
+
+#dicts {
+	background-color: turquoise;
+	padding: 1em;
+	grid-area: dicts;
+	border-radius: 0 0 var(--radius) var(--radius);
+}
+input + span {
+	padding-right: var(--radius);
+}
+input:checked + span{
+	color: white;
+	background-color: var(--bg-color);
+	border-radius: 0 var(--radius) var(--radius) 0;
+}
+input[type="radio"] + span{
+	color: #999;
+}
+input[type="radio"]:checked + span{
+	color: yellow;
+	background-color: crimson;
+	border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+#texts {
+	grid-area: texts;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 2em auto;
+}
+#texts textarea {
+	border-radius: 0 0 var(--radius) var(--radius);
+	font-family: "Microsoft Yahei", "MS Ghotic";
+}
+
+#workers {
+	font-size: xx-small;
+	color: #666;
+	grid-area: workers;
+	user-select: none;
+}
+
+
+#cn,#tw {
+	box-shadow: 1px 1px 3px #ccc;
+	text-shadow: 1px 1px 1px #eee;
+	background: #fff;
+	color: #000;
+	border-radius: var(--radius);
+	font-size: 9pt;
+	font-family: verdana,NSimSun,Gulim,MSGhotic;
+	resize: none;
+	outline: transparent;
+	padding: 8px;
+}
+#cn:focus,#tw:focus {
+	border-color: var(--bg-color);
+}
+h3:nth-child(1) {
+	border-top-left-radius: var(--radius);
+}
+h3:nth-child(2) {
+	border-top-right-radius: var(--radius);
+}
+h3 {
+	text-align: center;
+	background: var(--bg-color);
+	color: #fff;
+	box-shadow: 1px 1px 3px #ccc;
+}

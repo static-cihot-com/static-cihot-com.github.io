@@ -1,0 +1,171 @@
+{															
+  ‟category‟: [															
+    {															
+ΣΣΣβ	ΣΣΣβ	      ‟name‟: ‟Default‟,			      ‟name‟: ‟Default‟,										
+      ‟segments‟: [															
+        {															
+          ‟sid‟: ‟AosGroupPushMessage‟,βγ	          ‟source‟: ‟ΣΣΣβ	에로이카에서 알림이 도착했어요.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	從艾羅伊卡收到了通知。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [AosGroupPushMessage]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟AosGroupPushTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	에로이카 알리미	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	艾羅伊卡通知	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [AosGroupPushTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟AppName‟,βγ	          ‟source‟: ‟ΣΣΣβ	에로이카	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	艾羅伊卡	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [AppName]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟AppUpdateNotice‟,βγ	          ‟source‟: ‟ΣΣΣβ	최신 버전의 앱이 있습니다. 스토어로 이동합니다.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	存在最新版本App。將前往商店。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [AppUpdateNotice]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟AppUpdateTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	앱 업데이트 안내	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	App遊戲更新說明	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [AppUpdateTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟CDNDownAskDesc‟,βγ	          ‟source‟: ‟ΣΣΣβ	업데이트가 필요한 데이터가 있습니다.<br/>다운로드할 크기는 총 {0} 입니다.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	存在更新數據。<br/>下載檔案大小為{0}。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [CDNDownAskDesc]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟CDNDownAskTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	다운로드 알림	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	下載通知	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [CDNDownAskTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherErrMsg‟,βγ	          ‟source‟: ‟ΣΣΣβ	오류가 발생하여 작업을 재시도합니다.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	發生錯誤，重新嘗試進行作業。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherErrMsg]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherErrTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	서비스 오류	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	服務錯誤	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherErrTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherPopupTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	알림	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	提醒	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherPopupTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherResDown‟,βγ	          ‟source‟: ‟ΣΣΣβ	다운로드 중 ... {0}% ( {1}/{2} )	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	下載中... {0}% ( {1}/{2} )	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherResDown]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherResInstall‟,βγ	          ‟source‟: ‟ΣΣΣβ	설치 중 ... {0}% ( {1}/{2} )	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	設置中... {0}% ( {1}/{2} )	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherResInstall]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherStartup‟,βγ	          ‟source‟: ‟ΣΣΣβ	서비스를 초기화중입니다.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	服務重置中。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherStartup]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟ServiceErrorTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	서비스 오류	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	服務錯誤	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [ServiceErrorTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟UdwErrorDefault‟,βγ	          ‟source‟: ‟ΣΣΣβ	서비스 가능 상태를 조회하는 중 오류가 발생했습니다.<br/>잠시 후 다시 시도해주세요.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	查詢可服務狀態時發生錯誤。<br/>請稍後再試。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [UdwErrorDefault]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟UdwInspectionNotice‟,βγ	          ‟source‟: ‟ΣΣΣβ	서비스 점검중입니다.<br/>잠시 후 다시 시도해주세요.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	服務維護中。<br/>請稍後再試。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [UdwInspectionNotice]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟UdwInspectionTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	점검 안내	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	維護說明	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [UdwInspectionTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟Button_CANCEL‟,βγ	          ‟source‟: ‟ΣΣΣβ	취소	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	取消	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [Button_CANCEL]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟Button_OK‟,βγ	          ‟source‟: ‟ΣΣΣβ	확인	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	確認	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [Button_OK]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherGotoTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	세이와 루나의 세계로 진입합니다	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	進入賽伊與露娜的世界	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherGotoTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformSignInBegin‟,βγ	          ‟source‟: ‟ΣΣΣβ	플랫폼 로그인 시작	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	開始登入平台	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformSignInBegin]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟GuestLoginWarning‟,βγ	          ‟source‟: ‟ΣΣΣβ	게스트 계정으로 구매를 하면 게임 삭제나 기기 변동, 기기 초기화 시 구매 데이터가 사라질 수 있습니다.<br/>(다른 기기에서 컨텐츠를 이용하려면 플랫폼연동이 필요합니다)	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	若使用訪客帳號進行購買，遊戲刪除、變更裝置或裝置重置時，購買數據可能會消失。<br/>(欲在其他裝置使用購買內容，需進行平台連動)	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [GuestLoginWarning]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LobbyLoginBegin‟,βγ	          ‟source‟: ‟ΣΣΣβ	로비 로그인 시작	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	開始登入遊戲	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LobbyLoginBegin]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermLabelBasic‟,βγ	          ‟source‟: ‟ΣΣΣβ	게임 서비스 약관 동의 <size=14><color=#ffc150ff>(필수)</color></size>	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	同意遊戲服務條款<size=14><color=#ffc150ff>(必選)</color></size>	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermLabelBasic]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermLabelPrivacy‟,βγ	          ‟source‟: ‟ΣΣΣβ	개인 정보 보호 약관 동의 <size=14><color=#ffc150ff>(필수)</color></size>	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	同意個人資訊保護條款<size=14><color=#ffc150ff>(必選)</color></size>	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermLabelPrivacy]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermLabelPush‟,βγ	          ‟source‟: ‟ΣΣΣβ	푸시 알림 동의 <size=14><color=#ffffffff>(선택)</color></size>	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	同意推播通知<size=14><color=#ffffffff>(選擇)</color></size>	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermLabelPush]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermLabelPushNight‟,βγ	          ‟source‟: ‟ΣΣΣβ	야간시간 푸시 알림 동의 <size=14><color=#ffffffff>(선택)</color></size>	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	同意夜間推播通知<size=14><color=#ffffffff>(選擇)</color></size>	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermLabelPushNight]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟ButtonTermShow‟,βγ	          ‟source‟: ‟ΣΣΣβ	보기	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	查看	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [ButtonTermShow]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟ButtonTermAgreeAll‟,βγ	          ‟source‟: ‟ΣΣΣβ	모두 동의하고 시작하기	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	全部同意並開始	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [ButtonTermAgreeAll]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟ButtonTermsAgree‟,βγ	          ‟source‟: ‟ΣΣΣβ	시작하기	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	開始	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [ButtonTermsAgree]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LabelTermsGuide‟,βγ	          ‟source‟: ‟ΣΣΣβ	필수 동의 항목을 체크해주세요.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	請勾選必選項目。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LabelTermsGuide]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermResultTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	수신동의	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	同意推播	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermResultTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermsAgreePushAos‟,βγ	          ‟source‟: ‟ΣΣΣβ	[에로이카] 수신동의가 처리되었습니다. ({0})	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	已同意[艾羅伊卡]推播。({0})	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermsAgreePushAos, {0}은 시간 표시]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermsAgreePushIos‟,βγ	          ‟source‟: ‟ΣΣΣβ	[에로이카] 수신동의가 처리되었습니다. ({0})	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	已同意[艾羅伊卡]推播。({0})	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermsAgreePushIos, {0}은 시간 표시]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟LauncherErrNet‟,βγ	          ‟source‟: ‟ΣΣΣβ	네트워크 오류가 발생하여 작업을 재시도합니다.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	發生網路錯誤，重新嘗試進行作業。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [LauncherErrNet]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟Error_PlatformLoginFailed‟,βγ	          ‟source‟: ‟ΣΣΣβ	플랫폼 로그인에 실패했습니다.<br/>다시 시도해주세요.	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	無法登入平台。<br/>請稍後再試。	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [Error_PlatformLoginFailed]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟SelectServerTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	서버 선택	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	選擇伺服器	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [SelectServerTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟TermsTitle‟,βγ	          ‟source‟: ‟ΣΣΣβ	약관 동의	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	同意條款	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [TermsTitle]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLoginCancel‟,βγ	          ‟source‟: ‟ΣΣΣβ	로그인이 취소됐습니다	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	已取消登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLoginCancel]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟WithdrawPlatformUser‟,βγ	          ‟source‟: ‟ΣΣΣβ	탈퇴 처리한 계정으로 재접속 되었습니다.<br/>이 계정의 탈퇴 처리를 철회하고 다시 데이터를 복원할 수 있습니다.<br/><br/>(탈퇴 철회는 탈퇴일로 부터 7일 까지만 유효 합니다)	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	您已登入註銷帳號。<br/>若撤回註銷可回復過往數據。<br/><br/>(註銷撤回的有效期限為申請註銷起7天)	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [WithdrawPlatformUser]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟Button_Notice‟,βγ	          ‟source‟: ‟ΣΣΣβ	공지보기	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	查看公告	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [Button_Notice]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟ConnetingRetry‟,βγ	          ‟source‟: ‟ΣΣΣβ	접속 재시도	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	重新連線	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [ConnetingRetry]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟Button_Retry‟,βγ	          ‟source‟: ‟ΣΣΣβ	재시도	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	重試	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [Button_Retry]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟UdwInspectionTime‟,βγ	          ‟source‟: ‟ΣΣΣβ	점검 시간<br/>{0}	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	維護時間<br/>{0}	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [UdwInspectionTime]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Guest‟,βγ	          ‟source‟: ‟ΣΣΣβ	Sign in as Guest	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	訪客登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Guest]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_GameCenter‟,βγ	          ‟source‟: ‟ΣΣΣβ	Sign in with Game Center	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Game Center登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_GameCenter]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_GooglePlay‟,βγ	          ‟source‟: ‟ΣΣΣβ	Sign in with Google Play	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Google登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_GooglePlay]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Facebook‟,βγ	          ‟source‟: ‟ΣΣΣβ	Sign in with Facebook	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Facebook登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Facebook]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Apple‟,βγ	          ‟source‟: ‟ΣΣΣβ	Sign in with Apple	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Apple登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Apple]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Already_Guest‟,βγ	          ‟source‟: ‟ΣΣΣβ	Sign in with Apple	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Apple登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Already_Guest]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Already_GameCenter‟,βγ	          ‟source‟: ‟ΣΣΣβ	Signed in to Game Center	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Game Center登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Already_GameCenter]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Already_GooglePlay‟,βγ	          ‟source‟: ‟ΣΣΣβ	Signed in to Google Play	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Google Play登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Already_GooglePlay]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Already_Facebook‟,βγ	          ‟source‟: ‟ΣΣΣβ	Signed in to Facebook	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Facebook登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Already_Facebook]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        },															
+        {															
+          ‟sid‟: ‟PlatformLogin_Already_Apple‟,βγ	          ‟source‟: ‟ΣΣΣβ	Signed in to Apple	βΣΣΣ‟,βγ	          ‟target‟: ‟ΣΣΣβ	Apple登入	βΣΣΣ‟,βγ	          ‟context‟: ‟ΣΣΣβ	Context: 	βΣΣΣ‟,βγ	          ‟comment‟: ‟ΣΣΣβ	Comment: [PlatformLogin_Already_Apple]	βΣΣΣ‟,βγ	          ‟category‟: ‟ΣΣΣβ	Category: Default	βΣΣΣ‟
+        }															
+      ]															
+    }															
+  ]															
+}															
