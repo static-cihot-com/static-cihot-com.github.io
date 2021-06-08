@@ -1,37 +1,14 @@
 fetch('./AssetI2L_Default-zho-TW.fjson')
 	.then((res) => res.text())
-	.then(parse)
-
-
-function parse(d) {
-	let regexp = /(?<=‟target‟: ‟ΣΣΣβ\t)(?<target>[\s\S])*?(?=\tβΣΣΣ‟,βγ)/g
-
-	let arr = d.match(regexp)
-	console.log(arr)
-
-	let str = d.replace(regexp, function (...s) {
-		console.log(s)
-		return '【中文】'
+	.then(function(d){
+		let refs = makeRefs(d)
+		console.log( refs )
+		let str = makeStr(d, refs)
+		console.log(str)
 	})
-	//console.log(str)
 
-}
-
-
-function parse(d) {
+function makeRefs(d) {
 	let regexp = /(?<=‟target‟: ‟ΣΣΣβ\t)([\s\S])*?(?=\tβΣΣΣ‟,βγ)/g
-
-	//function* Nexter(){
-	//	let m
-	//	while (m = regexp.exec(d)) {
-	//		let start = m.index
-	//		let text = m[0]
-	//		let end = start + text.length
-	//		yield { text, start, end }
-	//	}
-	//}
-
-	//let nexter = Nexter()
 
 	let refs = []
 	let m
@@ -42,6 +19,10 @@ function parse(d) {
 		refs.push({ text, start, end })
 	}
 
+	return refs
+}
+
+function makeStr(d, refs){
 
 	let rs = refs.reduceRight((r, e, i)=>{
 		let { text, start, end } = e
@@ -57,11 +38,7 @@ function parse(d) {
 		return r
 	}, { result:'', input: d })
 
-
-
-	console.log(refs)
-	console.log(rs.result)
-	console.log(rs.input)
-
-
+	return rs.result
 }
+
+
