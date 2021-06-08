@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script>const module = window</script>
+	<script src="vue.min.js"></script>
+	<script src="vue-router.min.js"></script>
+	<script src="anime.min.js"></script>
+</head>
+
+<body>
+
+	<style>
+		.a {
+			color: red;
+		}
+
+		.b {
+			background-color: yellow;
+		}
+
+		.c {
+			font-weight: bold;
+		}
+	</style>
+
+
+	<template id="my-button">
+
+		<a v-if="(!tag && href) || tag === 'a'" v-bind:href="href || '#'">
+			<slot></slot>
+		</a>
+
+		<span v-else-if="tag==='span'">
+			<slot></slot>
+		</span>
+		
+		<button v-else>
+			<slot></slot>
+		</button>
+	
+	</template>
+
+
+	<!--
+		设计缺陷：
+			要增加 my-button 的类型时，需要修改整个模板。
+			分支中的<slot>重复。
+	-->
+	<div id="app">
+		<my-button href="https://localhost/vue">anchor</my-button>
+		<my-button tag="span">span</my-button>
+		<my-button>button</my-button>
+	</div>
+
+	<script>{
+		let MyButton = {
+			props: ['href', 'tag'],
+			template: '#my-button'
+		}
+		let vm = new Vue({
+			el: '#app',
+			components: {
+				MyButton
+			}
+		})
+	}</script>
+
+
+
+
+
+	<!--
+		可用 js 灵活控制
+	-->
+
+	<div id="app-new">
+		<my-button href="https://localhost/vue">anchor</my-button>
+		<my-button tag="span">span</my-button>
+		<my-button>button</my-button>
+	</div>
+
+	<script>{
+		let MyButton = {
+			props: ['href', 'tag'],
+			render: function(createElement){
+				//console.log(createElement !== document.createElement)
+				//console.log(this.$slots)
+				let tag = this.tag || (this.herf ? 'a' : 'button')
+				return createElement(tag, {
+					attrs:{
+						href:this.href || '#'
+					}
+				}, this.$slots.default)
+			},
+		}
+		new Vue({
+			el:'#app-new',
+			components: {
+				'my-button': MyButton
+			}
+		})
+	}</script>
+
+
+
+
+	<div id="app-new-2">
+		<my-button tag="a" v-bind:href="url"></my-button>
+	</div>
+	<script>{
+		let MyButton = {
+			props: ['href', 'tag'],
+			render: function(createElement){
+				//console.log(createElement !== document.createElement)
+				//console.log(this.$slots)
+				let tag = this.tag || (this.herf ? 'a' : 'button')
+				return createElement(tag, {
+					attrs:{
+						href:this.href || '#'
+					}
+				}, this.$slots.default)
+			},
+		}
+		new Vue({
+			el:'#app-new-2',
+			render: function(createElement){
+				return createElement('my-button', {
+					attrs: {
+						href: this.url
+					},
+					props: {
+						tag:'a'
+					}
+				})
+			},
+			components: { MyButton }
+		})
+	}</script>
+</body>
+
+</html>
