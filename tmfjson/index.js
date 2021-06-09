@@ -189,7 +189,6 @@ function makeRefs(d) {
 function makeStr(d, refs) {
 	let rs = refs.reduceRight((r, e, i) => {
 		let { text, start, end } = e
-		text = `【${e.text}】`
 
 		r.result = text + r.input.slice(end) + r.result
 		r.input = r.input.slice(0, start)
